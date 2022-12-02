@@ -17,7 +17,7 @@ SAP Fiori elements application for managing Piemca S.A.S. academic congress, sur
 
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
-##### Team
+### Team
 - Kevin Andrés Babativa Santos
 - Juana Sofía Pérez Garnica
 - Juan Pablo Ramirez Ramirez
