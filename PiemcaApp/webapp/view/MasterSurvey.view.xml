@@ -1,0 +1,31 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.piemca.controller.MasterSurvey" xmlns="sap.m">
+    <Page title="Encuestas" showHeader="true" showFooter="true" showNavButton="false">
+        <content>
+            <Button text="" type="Default" icon="sap-icon://nav-back" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiTinyMargin" press="_onButtonPress"/>
+            <Button text="" type="Emphasized" icon="sap-icon://add" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiTinyMargin" press="_onButtonPress1"/>
+            <List id="sap_List_Page_0-content-sap_m_ObjectList-1-poqilvzj25kr68rzxzxvnq5b3_S3-f58m18lgtmb3l1r8umw6klrx7_S7" mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" itemPress="_onObjectListItemPress" items="{path:'Survey', templateShareable:true}">
+                <infoToolbar/>
+                <headerToolbar>
+                    <Toolbar enabled="true" visible="true" width="" design="Solid">
+                        <content>
+                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%" liveChange="_onSearchFieldLiveChange"/>
+                        </content>
+                    </Toolbar>
+                </headerToolbar>
+                <items>
+                    <ObjectListItem intro="{path: 'Time', type: 'sap.ui.model.odata.type.Time', formatOptions: { UTC: true, style: 'medium' }}" title="{ClientName}" number="" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                        <attributes/>
+                        <firstStatus/>
+                        <secondStatus/>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content/>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+    </Page>
+</mvc:View>

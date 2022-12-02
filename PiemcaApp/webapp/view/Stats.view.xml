@@ -1,0 +1,101 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.piemca.controller.Stats" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:chart="sap.chart" xmlns:data="sap.chart.data">
+    <Page showHeader="true" title="Estadísticas Generales PIEMCA S.A.S." showFooter="true" showNavButton="true" navButtonPress="_onPageNavButtonPress">
+        <content>
+            <Title text="KPIs" titleStyle="H2" width="auto" textAlign="Begin" visible="true" wrapping="false" class="sapUiResponsiveMargin"/>
+            <form:Form width="100%" editable="true" visible="true">
+                <form:title/>
+                <form:formContainers>
+                    <form:FormContainer visible="true">
+                        <form:formElements>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Clientes" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <Text text="10" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                    <core:Icon src="sap-icon://person-placeholder" size="30px" height="48px" width="48px" visible="true"/>
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                        <form:title/>
+                    </form:FormContainer>
+                    <form:FormContainer visible="true">
+                        <form:formElements>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Congresos Académico Asistidos" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <Text text="5" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                    <core:Icon src="sap-icon://family-care" size="30px" height="48px" width="48px" visible="true"/>
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                        <form:title/>
+                    </form:FormContainer>
+                    <form:FormContainer visible="true">
+                        <form:formElements>
+                            <form:FormElement visible="true">
+                                <form:label>
+                                    <Label text="Encuestas Realizadas" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </form:label>
+                                <form:fields>
+                                    <Text text="57" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                    <core:Icon src="sap-icon://survey" size="30px" height="48px" width="48px" visible="true"/>
+                                </form:fields>
+                            </form:FormElement>
+                        </form:formElements>
+                        <form:title/>
+                    </form:FormContainer>
+                </form:formContainers>
+                <form:layout>
+                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                </form:layout>
+            </form:Form>
+            <Title text="Gráficas" titleStyle="H2" width="auto" textAlign="Begin" visible="true" wrapping="false" class="sapUiResponsiveMargin"/>
+            <chart:Chart id="sap_Responsive_Page_0-content-sap_chart_LineChart-1669157474737" width="936px" height="180.046875px" visibleDimensions="__id" visibleMeasures="mea0" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_chart_LineChart-1669157474737/vizProperties}" chartType="line" selectionMode="Single" uiConfig="{}">
+                <chart:dimensions>
+                    <data:Dimension name="__id" label="Año" role="category" textProperty="dim0"/>
+                </chart:dimensions>
+                <chart:measures>
+                    <data:Measure name="mea0" label="Clientes" role="axis2"/>
+                </chart:measures>
+            </chart:Chart>
+            <chart:Chart id="sap_Responsive_Page_0-content-sap_chart_BarChart-1669157577687" width="100%" height="257px" visibleDimensions="__id" visibleMeasures="mea0" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_chart_BarChart-1669157577687/vizProperties}" chartType="bar" selectionMode="Single" uiConfig="{}">
+                <chart:dimensions>
+                    <data:Dimension name="__id" label="Producto" role="category" textProperty="dim0"/>
+                </chart:dimensions>
+                <chart:measures>
+                    <data:Measure name="mea0" label="Interés (Encuestas)" role="axis2"/>
+                </chart:measures>
+            </chart:Chart>
+            <chart:Chart id="sap_Responsive_Page_0-content-sap_chart_DonutChart-1669157808715" width="557px" height="202.46875px" visibleDimensions="__id" visibleMeasures="mea0" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_chart_DonutChart-1669157808715/vizProperties}" chartType="donut" selectionMode="Single" uiConfig="{}">
+                <chart:dimensions>
+                    <data:Dimension name="__id" label="Línea" role="category" textProperty="dim0"/>
+                </chart:dimensions>
+                <chart:measures>
+                    <data:Measure name="mea0" label="Preferencia" role="axis2"/>
+                </chart:measures>
+            </chart:Chart>
+            <chart:Chart id="sap_Responsive_Page_0-content-sap_chart_BarChart-1669157903881" width="100%" height="230.47000000px" visibleDimensions="__id" visibleMeasures="mea0" vizProperties="{staticDataModel>/sap_Responsive_Page_0-content-sap_chart_BarChart-1669157903881/vizProperties}" chartType="bar" selectionMode="Single" uiConfig="{}">
+                <chart:dimensions>
+                    <data:Dimension name="__id" label="Característica" role="category" textProperty="dim0"/>
+                </chart:dimensions>
+                <chart:measures>
+                    <data:Measure name="mea0" label="Interés (Encuestas)" role="axis2"/>
+                </chart:measures>
+            </chart:Chart>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <ToolbarSpacer width=""/>
+                    <Text text="PIEMCA S.A.S." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true" class="sapUiResponsiveMargin"/>
+                </content>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

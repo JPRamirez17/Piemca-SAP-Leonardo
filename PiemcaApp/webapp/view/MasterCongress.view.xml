@@ -1,0 +1,32 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.piemca.controller.MasterCongress" xmlns="sap.m">
+    <Page title="Congresos Académicos" showHeader="true" showFooter="true" showNavButton="false">
+        <content>
+            <Button text="" type="Back" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiTinyMargin" press="_onButtonPress"/>
+            <Button text="" type="Emphasized" icon="sap-icon://add" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" class="sapUiTinyMargin" press="_onButtonPress1"/>
+            <List id="sap_List_Page_0-content-sap_m_ObjectList-1-poqilvzj25kr68rzxzxvnq5b3_S3" mode="SingleSelectMaster" width="100%" headerText="Header" footerText="" backgroundDesign="Solid" showSeparators="All" growing="true" growingThreshold="20" growingScrollToLoad="true" visible="true" itemPress="_onObjectListItemPress" items="{path:'/CongressSet', templateShareable:true}">
+                <infoToolbar/>
+                <headerToolbar>
+                    <Toolbar enabled="true" visible="true" width="" design="Solid">
+                        <content>
+                            <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%" liveChange="_onSearchFieldLiveChange"/>
+                        </content>
+                    </Toolbar>
+                </headerToolbar>
+                <items>
+                    <ObjectListItem intro="{path: 'Date', type: 'sap.ui.model.type.Date', formatOptions: { UTC: true, style: 'short' }}" title="{Name}" number="{State}" numberUnit="" numberState="None" type="Active" selected="false" showMarkers="false">
+                        <attributes/>
+                        <firstStatus/>
+                        <secondStatus/>
+                    </ObjectListItem>
+                </items>
+            </List>
+            <Button text="Button" type="Default" iconFirst="true" width="auto" enabled="false" visible="false" iconDensityAware="false" press="_onButtonPress2"/>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content/>
+            </OverflowToolbar>
+        </footer>
+        <headerContent/>
+    </Page>
+</mvc:View>

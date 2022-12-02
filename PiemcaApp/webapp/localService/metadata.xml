@@ -1,0 +1,282 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="3597110a7c08bba0182d30a5" xml:lang="en" sap:schema-version="0000" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityContainer Name="3597110a7c08bba0182d30a5_Entities" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="ProductSet" EntityType="3597110a7c08bba0182d30a5.Product" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="ProductSupplierSupplier" Association="3597110a7c08bba0182d30a5.ProductSupplierSupplier" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="ProductSet" Role="FromRole_ProductSupplierSupplier"/>
+                    <End EntitySet="SupplierSet" Role="ToRole_ProductSupplierSupplier"/>
+                </AssociationSet>
+                <AssociationSet Name="ProductCategory1Category" Association="3597110a7c08bba0182d30a5.ProductCategory1Category" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="ProductSet" Role="FromRole_ProductCategory1Category"/>
+                    <End EntitySet="CategorySet" Role="ToRole_ProductCategory1Category"/>
+                </AssociationSet>
+                <EntitySet Name="SupplierSet" EntityType="3597110a7c08bba0182d30a5.Supplier" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="CongressSet" EntityType="3597110a7c08bba0182d30a5.Congress" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="CongressProductProduct" Association="3597110a7c08bba0182d30a5.CongressProductProduct" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="CongressSet" Role="FromRole_CongressProductProduct"/>
+                    <End EntitySet="ProductSet" Role="ToRole_CongressProductProduct"/>
+                </AssociationSet>
+                <AssociationSet Name="CongressSurveySurvey" Association="3597110a7c08bba0182d30a5.CongressSurveySurvey" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="CongressSet" Role="FromRole_CongressSurveySurvey"/>
+                    <End EntitySet="SurveySet" Role="ToRole_CongressSurveySurvey"/>
+                </AssociationSet>
+                <AssociationSet Name="CongressCityCity" Association="3597110a7c08bba0182d30a5.CongressCityCity" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="CongressSet" Role="FromRole_CongressCityCity"/>
+                    <End EntitySet="CitySet" Role="ToRole_CongressCityCity"/>
+                </AssociationSet>
+                <AssociationSet Name="CongressState1State" Association="3597110a7c08bba0182d30a5.CongressState1State" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="CongressSet" Role="FromRole_CongressState1State"/>
+                    <End EntitySet="StateSet" Role="ToRole_CongressState1State"/>
+                </AssociationSet>
+                <EntitySet Name="ClientSet" EntityType="3597110a7c08bba0182d30a5.Client" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="ClientType1Type" Association="3597110a7c08bba0182d30a5.ClientType1Type" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="ClientSet" Role="FromRole_ClientType1Type"/>
+                    <End EntitySet="TypeSet" Role="ToRole_ClientType1Type"/>
+                </AssociationSet>
+                <EntitySet Name="SurveySet" EntityType="3597110a7c08bba0182d30a5.Survey" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <AssociationSet Name="SurveyClientClient" Association="3597110a7c08bba0182d30a5.SurveyClientClient" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="SurveySet" Role="FromRole_SurveyClientClient"/>
+                    <End EntitySet="ClientSet" Role="ToRole_SurveyClientClient"/>
+                </AssociationSet>
+                <AssociationSet Name="SurveyPreferencesProduct" Association="3597110a7c08bba0182d30a5.SurveyPreferencesProduct" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="SurveySet" Role="FromRole_SurveyPreferencesProduct"/>
+                    <End EntitySet="ProductSet" Role="ToRole_SurveyPreferencesProduct"/>
+                </AssociationSet>
+                <AssociationSet Name="SurveyServiceService" Association="3597110a7c08bba0182d30a5.SurveyServiceService" sap:creatable="true" sap:updatable="true" sap:deletable="true">
+                    <End EntitySet="SurveySet" Role="FromRole_SurveyServiceService"/>
+                    <End EntitySet="ServiceSet" Role="ToRole_SurveyServiceService"/>
+                </AssociationSet>
+                <EntitySet Name="ServiceSet" EntityType="3597110a7c08bba0182d30a5.Service" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="CitySet" EntityType="3597110a7c08bba0182d30a5.City" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="CategorySet" EntityType="3597110a7c08bba0182d30a5.Category" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="TypeSet" EntityType="3597110a7c08bba0182d30a5.Type" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+                <EntitySet Name="StateSet" EntityType="3597110a7c08bba0182d30a5.State" sap:creatable="true" sap:updatable="true" sap:deletable="true"/>
+            </EntityContainer>
+            <EntityType Name="Product">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name"/>
+                <Property Name="Category" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Category"/>
+                <Property Name="___FK_fd103d42ea13adbc183d5c08_00012" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_fd103d42ea13adbc183d5c08_00012"/>
+                <Property Name="___FK_fd103d42ea13adbc183d5c08_00021" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_fd103d42ea13adbc183d5c08_00021"/>
+                <Property Name="___FK_fd103d42ea13adbc183d5c08_00039" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_fd103d42ea13adbc183d5c08_00039"/>
+                <Property Name="Description" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Description"/>
+                <Property Name="Stock" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Stock"/>
+                <Property Name="___FK_481d9ac2494dc9b4184a2981_00007" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_481d9ac2494dc9b4184a2981_00007"/>
+                <Property Name="Supplies" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Supplies"/>
+                <Property Name="Image" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Image"/>
+                <NavigationProperty Name="Supplier" Relationship="3597110a7c08bba0182d30a5.ProductSupplierSupplier" FromRole="FromRole_ProductSupplierSupplier" ToRole="ToRole_ProductSupplierSupplier"/>
+                <NavigationProperty Name="Category1" Relationship="3597110a7c08bba0182d30a5.ProductCategory1Category" FromRole="FromRole_ProductCategory1Category" ToRole="ToRole_ProductCategory1Category"/>
+            </EntityType>
+            <Association Name="ProductSupplierSupplier">
+                <End Type="3597110a7c08bba0182d30a5.Product" Multiplicity="1" Role="FromRole_ProductSupplierSupplier"/>
+                <End Type="3597110a7c08bba0182d30a5.Supplier" Multiplicity="1" Role="ToRole_ProductSupplierSupplier"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_ProductSupplierSupplier">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_ProductSupplierSupplier">
+                        <PropertyRef Name="___FK_fd103d42ea13adbc183d5c08_00012"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="ProductCategory1Category">
+                <End Type="3597110a7c08bba0182d30a5.Product" Multiplicity="1" Role="FromRole_ProductCategory1Category"/>
+                <End Type="3597110a7c08bba0182d30a5.Category" Multiplicity="1" Role="ToRole_ProductCategory1Category"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_ProductCategory1Category">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_ProductCategory1Category">
+                        <PropertyRef Name="___FK_481d9ac2494dc9b4184a2981_00007"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Supplier">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name"/>
+            </EntityType>
+            <EntityType Name="Congress">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name"/>
+                <Property Name="Assistants" Type="Edm.Int16" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Assistants"/>
+                <Property Name="Date" Type="Edm.DateTime" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:display-format="Date" sap:label="Date"/>
+                <Property Name="State" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="State"/>
+                <Property Name="___FK_18dcc203d1a9695e183fa668_00006" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_18dcc203d1a9695e183fa668_00006"/>
+                <Property Name="Cost" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Cost"/>
+                <Property Name="City1" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="City1"/>
+                <Property Name="SurveyCount" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:calculated="{&quot;calculation&quot;:&quot;[{\&quot;label\&quot;:\&quot;PROPERTY\&quot;,\&quot;name\&quot;:\&quot;property\&quot;,\&quot;entityId\&quot;:\&quot;Survey\&quot;,\&quot;navPropId\&quot;:\&quot;Survey\&quot;,\&quot;navPropOp\&quot;:\&quot;count\&quot;,\&quot;propertyId\&quot;:\&quot;ID\&quot;,\&quot;type\&quot;:\&quot;property\&quot;,\&quot;propertyType\&quot;:\&quot;String\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:1,\&quot;computedType\&quot;:\&quot;number\&quot;,\&quot;navPropName\&quot;:\&quot;Survey\&quot;,\&quot;entityName\&quot;:\&quot;Survey\&quot;,\&quot;propertyName\&quot;:\&quot;ID\&quot;}]&quot;,&quot;inputProperties&quot;:[{&quot;navPropId&quot;:&quot;Survey&quot;,&quot;entityId&quot;:&quot;Survey&quot;,&quot;propertyId&quot;:&quot;ID&quot;}]}" sap:label="Stats"/>
+                <Property Name="Effectiveness" Type="Edm.Decimal" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:calculated="{&quot;calculation&quot;:&quot;[{\&quot;label\&quot;:\&quot;*\&quot;,\&quot;name\&quot;:\&quot;times\&quot;,\&quot;type\&quot;:\&quot;operator\&quot;,\&quot;left\&quot;:[{\&quot;label\&quot;:\&quot;/\&quot;,\&quot;name\&quot;:\&quot;divide\&quot;,\&quot;type\&quot;:\&quot;operator\&quot;,\&quot;left\&quot;:[{\&quot;label\&quot;:\&quot;PROPERTY\&quot;,\&quot;name\&quot;:\&quot;property\&quot;,\&quot;entityId\&quot;:\&quot;Survey\&quot;,\&quot;navPropId\&quot;:\&quot;Survey\&quot;,\&quot;navPropOp\&quot;:\&quot;count\&quot;,\&quot;propertyId\&quot;:\&quot;ID\&quot;,\&quot;type\&quot;:\&quot;property\&quot;,\&quot;propertyType\&quot;:\&quot;String\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:3,\&quot;computedType\&quot;:\&quot;number\&quot;,\&quot;navPropName\&quot;:\&quot;Survey\&quot;,\&quot;entityName\&quot;:\&quot;Survey\&quot;,\&quot;propertyName\&quot;:\&quot;ID\&quot;}],\&quot;right\&quot;:[{\&quot;label\&quot;:\&quot;PROPERTY\&quot;,\&quot;name\&quot;:\&quot;property\&quot;,\&quot;entityId\&quot;:\&quot;Congress\&quot;,\&quot;navPropId\&quot;:\&quot;\&quot;,\&quot;navPropOp\&quot;:null,\&quot;propertyId\&quot;:\&quot;Assistants\&quot;,\&quot;type\&quot;:\&quot;property\&quot;,\&quot;propertyType\&quot;:\&quot;Int16\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:4,\&quot;computedType\&quot;:\&quot;number\&quot;,\&quot;entityName\&quot;:\&quot;Congress\&quot;,\&quot;propertyName\&quot;:\&quot;Assistants\&quot;}],\&quot;displayLabel\&quot;:\&quot;/\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:2,\&quot;computedType\&quot;:\&quot;number\&quot;}],\&quot;right\&quot;:[{\&quot;label\&quot;:\&quot;VALUE\&quot;,\&quot;name\&quot;:\&quot;value\&quot;,\&quot;type\&quot;:\&quot;value\&quot;,\&quot;value\&quot;:\&quot;100\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:5,\&quot;computedType\&quot;:\&quot;number\&quot;}],\&quot;displayLabel\&quot;:\&quot;*\&quot;,\&quot;isNewLine\&quot;:false,\&quot;id\&quot;:1,\&quot;computedType\&quot;:\&quot;number\&quot;}]&quot;,&quot;inputProperties&quot;:[{&quot;navPropId&quot;:&quot;Survey&quot;,&quot;entityId&quot;:&quot;Survey&quot;,&quot;propertyId&quot;:&quot;ID&quot;},{&quot;navPropId&quot;:&quot;&quot;,&quot;entityId&quot;:&quot;Congress&quot;,&quot;propertyId&quot;:&quot;Assistants&quot;}]}" sap:label="Effectiveness"/>
+                <Property Name="___FK_b6d2166c1f458fce184a7e9f_00011" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_b6d2166c1f458fce184a7e9f_00011"/>
+                <NavigationProperty Name="Product" Relationship="3597110a7c08bba0182d30a5.CongressProductProduct" FromRole="FromRole_CongressProductProduct" ToRole="ToRole_CongressProductProduct"/>
+                <NavigationProperty Name="Survey" Relationship="3597110a7c08bba0182d30a5.CongressSurveySurvey" FromRole="FromRole_CongressSurveySurvey" ToRole="ToRole_CongressSurveySurvey"/>
+                <NavigationProperty Name="City" Relationship="3597110a7c08bba0182d30a5.CongressCityCity" FromRole="FromRole_CongressCityCity" ToRole="ToRole_CongressCityCity"/>
+                <NavigationProperty Name="State1" Relationship="3597110a7c08bba0182d30a5.CongressState1State" FromRole="FromRole_CongressState1State" ToRole="ToRole_CongressState1State"/>
+            </EntityType>
+            <Association Name="CongressProductProduct">
+                <End Type="3597110a7c08bba0182d30a5.Congress" Multiplicity="1" Role="FromRole_CongressProductProduct"/>
+                <End Type="3597110a7c08bba0182d30a5.Product" Multiplicity="*" Role="ToRole_CongressProductProduct"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_CongressProductProduct">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_CongressProductProduct">
+                        <PropertyRef Name="___FK_fd103d42ea13adbc183d5c08_00021"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="CongressSurveySurvey">
+                <End Type="3597110a7c08bba0182d30a5.Congress" Multiplicity="1" Role="FromRole_CongressSurveySurvey"/>
+                <End Type="3597110a7c08bba0182d30a5.Survey" Multiplicity="*" Role="ToRole_CongressSurveySurvey"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_CongressSurveySurvey">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_CongressSurveySurvey">
+                        <PropertyRef Name="___FK_fd103d42ea13adbc183d5c08_00033"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="CongressCityCity">
+                <End Type="3597110a7c08bba0182d30a5.Congress" Multiplicity="1" Role="FromRole_CongressCityCity"/>
+                <End Type="3597110a7c08bba0182d30a5.City" Multiplicity="1" Role="ToRole_CongressCityCity"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_CongressCityCity">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_CongressCityCity">
+                        <PropertyRef Name="___FK_18dcc203d1a9695e183fa668_00006"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="CongressState1State">
+                <End Type="3597110a7c08bba0182d30a5.Congress" Multiplicity="1" Role="FromRole_CongressState1State"/>
+                <End Type="3597110a7c08bba0182d30a5.State" Multiplicity="1" Role="ToRole_CongressState1State"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_CongressState1State">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_CongressState1State">
+                        <PropertyRef Name="___FK_b6d2166c1f458fce184a7e9f_00011"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Client">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Name" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Name"/>
+                <Property Name="Type" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Type"/>
+                <Property Name="Email" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Email"/>
+                <Property Name="Phone" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Phone"/>
+                <Property Name="Potential" Type="Edm.Boolean" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Potential"/>
+                <Property Name="Contact" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Contact"/>
+                <Property Name="Image" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Image"/>
+                <Property Name="___FK_b6d2166c1f458fce184a7e9f_00005" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_b6d2166c1f458fce184a7e9f_00005"/>
+                <NavigationProperty Name="Type1" Relationship="3597110a7c08bba0182d30a5.ClientType1Type" FromRole="FromRole_ClientType1Type" ToRole="ToRole_ClientType1Type"/>
+            </EntityType>
+            <Association Name="ClientType1Type">
+                <End Type="3597110a7c08bba0182d30a5.Client" Multiplicity="1" Role="FromRole_ClientType1Type"/>
+                <End Type="3597110a7c08bba0182d30a5.Type" Multiplicity="1" Role="ToRole_ClientType1Type"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_ClientType1Type">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_ClientType1Type">
+                        <PropertyRef Name="___FK_b6d2166c1f458fce184a7e9f_00005"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Survey">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="Time" Type="Edm.Time" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Time"/>
+                <Property Name="___FK_fd103d42ea13adbc183d5c08_00033" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_fd103d42ea13adbc183d5c08_00033"/>
+                <Property Name="___FK_fd103d42ea13adbc183d5c08_00037" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_fd103d42ea13adbc183d5c08_00037"/>
+                <Property Name="ClientName" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="Client1"/>
+                <NavigationProperty Name="Client" Relationship="3597110a7c08bba0182d30a5.SurveyClientClient" FromRole="FromRole_SurveyClientClient" ToRole="ToRole_SurveyClientClient"/>
+                <NavigationProperty Name="Preferences" Relationship="3597110a7c08bba0182d30a5.SurveyPreferencesProduct" FromRole="FromRole_SurveyPreferencesProduct" ToRole="ToRole_SurveyPreferencesProduct"/>
+                <NavigationProperty Name="Service" Relationship="3597110a7c08bba0182d30a5.SurveyServiceService" FromRole="FromRole_SurveyServiceService" ToRole="ToRole_SurveyServiceService"/>
+            </EntityType>
+            <Association Name="SurveyClientClient">
+                <End Type="3597110a7c08bba0182d30a5.Survey" Multiplicity="1" Role="FromRole_SurveyClientClient"/>
+                <End Type="3597110a7c08bba0182d30a5.Client" Multiplicity="1" Role="ToRole_SurveyClientClient"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_SurveyClientClient">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="FromRole_SurveyClientClient">
+                        <PropertyRef Name="___FK_fd103d42ea13adbc183d5c08_00037"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SurveyPreferencesProduct">
+                <End Type="3597110a7c08bba0182d30a5.Survey" Multiplicity="1" Role="FromRole_SurveyPreferencesProduct"/>
+                <End Type="3597110a7c08bba0182d30a5.Product" Multiplicity="*" Role="ToRole_SurveyPreferencesProduct"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SurveyPreferencesProduct">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SurveyPreferencesProduct">
+                        <PropertyRef Name="___FK_fd103d42ea13adbc183d5c08_00039"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="SurveyServiceService">
+                <End Type="3597110a7c08bba0182d30a5.Survey" Multiplicity="1" Role="FromRole_SurveyServiceService"/>
+                <End Type="3597110a7c08bba0182d30a5.Service" Multiplicity="*" Role="ToRole_SurveyServiceService"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_SurveyServiceService">
+                        <PropertyRef Name="ID"/>
+                    </Principal>
+                    <Dependent Role="ToRole_SurveyServiceService">
+                        <PropertyRef Name="___FK_fd103d42ea13adbc183d5c08_00044"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityType Name="Service">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+                <Property Name="___FK_fd103d42ea13adbc183d5c08_00044" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="___FK_fd103d42ea13adbc183d5c08_00044"/>
+            </EntityType>
+            <EntityType Name="City">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+            <EntityType Name="Category">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+            <EntityType Name="Type">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+            <EntityType Name="State">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" sap:creatable="true" sap:updatable="true" sap:deletable="true" sap:label="ID"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

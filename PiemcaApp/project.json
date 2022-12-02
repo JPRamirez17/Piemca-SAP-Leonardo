@@ -1,0 +1,55 @@
+{
+    "dataBinding": {
+        "/webapp/view/Main.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/MasterClient.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/DetailClient.view.xml": {
+            "entitySet": "/ClientSet"
+        }, 
+        "/webapp/view/DetailClientCreate.view.xml": {
+            "entitySet": "/ClientSet"
+        }, 
+        "/webapp/view/MasterCongress.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/DetailCongress.view.xml": {
+            "entitySet": "/CongressSet"
+        }, 
+        "/webapp/view/DetailCongressCreate.view.xml": {
+            "entitySet": "/ProductSet"
+        }, 
+        "/webapp/view/DetailCongressEdit.view.xml": {
+            "entitySet": "/CongressSet"
+        }, 
+        "/webapp/view/MasterSurvey.view.xml": {
+            "entitySet": "/CongressSet"
+        }, 
+        "/webapp/view/DetailSurvey.view.xml": {
+            "entitySet": "/SurveySet"
+        }, 
+        "/webapp/view/DetailServiceCreate.view.xml": {
+            "entitySet": "/ServiceSet"
+        }, 
+        "/webapp/view/DetailSurveyCreate.view.xml": {
+            "entitySet": "/SurveySet"
+        }, 
+        "/webapp/view/MasterProduct.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/DetailProduct.view.xml": {
+            "entitySet": "/ProductSet"
+        }, 
+        "/webapp/view/DetailProductEdit.view.xml": {
+            "entitySet": "/ProductSet"
+        }, 
+        "/webapp/view/Stats.view.xml": {
+            "entitySet": ""
+        }, 
+        "/webapp/view/Dialog1.view.xml": {
+            "entitySet": ""
+        } 
+    }
+}

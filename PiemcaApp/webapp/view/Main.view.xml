@@ -1,0 +1,130 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.piemca.controller.Main" xmlns="sap.m" xmlns:layout="sap.ui.layout" xmlns:statusindicator="sap.suite.ui.commons.statusindicator">
+    <Page showHeader="false" title="Página Inicial" showFooter="true" showNavButton="false">
+        <content>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content>
+                    <Text text="Página Inicial" width="81.6875px" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true" class="sapUiResponsiveMargin"/>
+                    <ToolbarSpacer width=""/>
+                    <Text text="PIEMCA S.A.S." width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit" visible="true" class="sapUiResponsiveMargin"/>
+                </content>
+            </OverflowToolbar>
+            <layout:BlockLayout background="Default" visible="true">
+                <layout:content>
+                    <layout:BlockLayoutRow scrollable="false">
+                        <layout:content>
+                            <layout:BlockLayoutCell width="2" title="" titleAlignment="Begin" titleLevel="Auto">
+                                <layout:content>
+                                    <Text text="" width="auto" maxLines="20" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </layout:content>
+                            </layout:BlockLayoutCell>
+                            <layout:BlockLayoutCell width="2" title="" titleAlignment="Begin" titleLevel="Auto">
+                                <layout:content/>
+                            </layout:BlockLayoutCell>
+                        </layout:content>
+                    </layout:BlockLayoutRow>
+                </layout:content>
+            </layout:BlockLayout>
+            <GenericTile header="Clientes" subheader="Actuales y Potenciales" frameType="Auto" class="sapUiResponsiveMargin" press="_onGenericTilePress">
+                <tileContent>
+                    <TileContent footer="" unit="">
+                        <content>
+                            <statusindicator:StatusIndicator width="50px" height="50px" value="100" showLabel="false" labelPosition="Left" class="sapUiResponsiveMargin">
+                                <statusindicator:groups>
+                                    <statusindicator:ShapeGroup>
+                                        <statusindicator:shapes>
+                                            <statusindicator:CustomShape fillColor="green" definition="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 24 32&quot; id=&quot;uniE0CA&quot;>&lt;path d=&quot;M20 8q0 1.688-.625 3.125t-1.719 2.531-2.563 1.719-3.094.625q-1.688 0-3.125-.625t-2.531-1.719-1.719-2.531T3.999 8q0-1.625.625-3.094t1.719-2.563T8.874.624t3.125-.625q1.625 0 3.094.625t2.563 1.719 1.719 2.563T20 8zm-8 6q2.5 0 4.25-1.75T18 8t-1.75-4.25T12 2 7.75 3.75 6 8t1.75 4.25T12 14zm4 2q1.625 0 3.094.625t2.563 1.719 1.719 2.563.625 3.094v8h-24v-8q0-1.625.625-3.094t1.719-2.563 2.531-1.719T8.001 16h8zm6 8q0-2.5-1.75-4.25T16 18H8q-2.5 0-4.25 1.75T2 24v6h20v-6z&quot;/>&lt;/svg>" fillingDirection="Right"/>
+                                        </statusindicator:shapes>
+                                    </statusindicator:ShapeGroup>
+                                </statusindicator:groups>
+                                <statusindicator:propertyThresholds>
+                                    <statusindicator:PropertyThreshold fillColor="green" toValue="100"/>
+                                </statusindicator:propertyThresholds>
+                            </statusindicator:StatusIndicator>
+                        </content>
+                    </TileContent>
+                </tileContent>
+            </GenericTile>
+            <GenericTile header="Congresos Académicos" subheader="Histórico" frameType="Auto" class="sapUiResponsiveMargin" press="_onGenericTilePress1">
+                <tileContent>
+                    <TileContent footer="" unit="">
+                        <content>
+                            <statusindicator:StatusIndicator width="50px" height="50px" value="100" showLabel="false" labelPosition="Left" class="sapUiResponsiveMargin">
+                                <statusindicator:groups>
+                                    <statusindicator:ShapeGroup>
+                                        <statusindicator:shapes>
+                                            <statusindicator:CustomShape fillColor="green" definition="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 32 32&quot; id=&quot;uniE064&quot;>&lt;path d=&quot;M8 11.875q-1.25 0-2.344.156t-1.906.594-1.281 1.219T2 15.875v6.063h6v2H0v-8.063q0-1.625.625-2.781t1.719-1.875 2.531-1.031T8 9.875q2.188 0 3.563.344t2.438 1.719q-.438.188-1.063.438t-.938.563q-.875-.625-1.75-.844T8 11.876zm18 .063q1.813 0 2.969.625t1.844 1.719.938 2.531.25 3.125v6h-6v-2h4v-4q0-1.25-.156-2.344t-.594-1.906-1.219-1.281-2.031-.469q-1.125 0-1.531.188t-.531.5l-1.5-1.5q.563-.5 1.5-.844t2.063-.344zm-19-2q-2.125 0-3.563-1.469T1.999 4.938t1.438-3.531T7-.062q2.063 0 3.531 1.469T12 4.938t-1.469 3.531T7 9.938zm0-8q-1.25 0-2.125.875T4 4.938t.875 2.125T7 7.938t2.125-.875T10 4.938t-.875-2.125T7 1.938zm18 10q-2.125 0-3.563-1.469t-1.438-3.531 1.438-3.531T25 1.938q2.063 0 3.531 1.469T30 6.938t-1.469 3.531T25 11.938zm0-8q-1.25 0-2.125.875T22 6.938t.875 2.125T25 9.938t2.125-.875T28 6.938t-.875-2.125T25 3.938zm-7 20q3.313 0 4.656 1.313T24 29.939v2H10v-2q0-3.375 1.313-4.688t4.688-1.313h2zm4 6q0-1.25-.156-2.031t-.594-1.219-1.219-.594T18 25.938h-2q-1.25 0-2.031.156t-1.219.594-.594 1.219T12 29.938h10zm0-11q0 2.063-1.469 3.531T17 23.938t-3.531-1.469T12 18.938t1.469-3.531T17 13.938t3.531 1.469T22 18.938zm-5 3q1.25 0 2.125-.875T20 18.938t-.875-2.125T17 15.938t-2.125.875T14 18.938t.875 2.125 2.125.875z&quot;/>&lt;/svg>" fillingDirection="Right"/>
+                                        </statusindicator:shapes>
+                                    </statusindicator:ShapeGroup>
+                                </statusindicator:groups>
+                                <statusindicator:propertyThresholds>
+                                    <statusindicator:PropertyThreshold fillColor="green" toValue="100"/>
+                                </statusindicator:propertyThresholds>
+                            </statusindicator:StatusIndicator>
+                        </content>
+                    </TileContent>
+                </tileContent>
+            </GenericTile>
+            <GenericTile header="Productos" subheader="Mercado Actual" frameType="Auto" class="sapUiResponsiveMargin" press="_onGenericTilePress2">
+                <tileContent>
+                    <TileContent footer="" unit="">
+                        <content>
+                            <statusindicator:StatusIndicator width="50px" height="50px" value="100" showLabel="false" labelPosition="Left" class="sapUiResponsiveMargin">
+                                <statusindicator:groups>
+                                    <statusindicator:ShapeGroup>
+                                        <statusindicator:shapes>
+                                            <statusindicator:CustomShape fillColor="green" definition="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 28 32&quot; id=&quot;uniE011&quot;>&lt;path d=&quot;M27.313 6.875V25l-13.625 6.875L.063 25V6.875l6.813-3.438 13.688 6.813v6.813l-2.313 1.125v-6.563L6.876 6 2.313 8.188v15.5l11.375 5.625 11.375-5.625v-15.5L13.688 2.563l-1.75.875-2.563-1.313L13.688 0zm-22.688 12.5l6.75 3.375v2.813l-6.75-3.313v-2.875z&quot;/>&lt;/svg>" fillingDirection="Right"/>
+                                        </statusindicator:shapes>
+                                    </statusindicator:ShapeGroup>
+                                </statusindicator:groups>
+                                <statusindicator:propertyThresholds>
+                                    <statusindicator:PropertyThreshold fillColor="green" toValue="100"/>
+                                </statusindicator:propertyThresholds>
+                            </statusindicator:StatusIndicator>
+                        </content>
+                    </TileContent>
+                </tileContent>
+            </GenericTile>
+            <GenericTile header="Estadísticas" subheader="Generales Piemca" frameType="Auto" class="sapUiResponsiveMargin" press="_onGenericTilePress3">
+                <tileContent>
+                    <TileContent footer="" unit="">
+                        <content>
+                            <statusindicator:StatusIndicator width="50px" height="50px" value="100" showLabel="false" labelPosition="Left" class="sapUiResponsiveMargin">
+                                <statusindicator:groups>
+                                    <statusindicator:ShapeGroup>
+                                        <statusindicator:shapes>
+                                            <statusindicator:CustomShape fillColor="green" definition="&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 28 32&quot; id=&quot;uniE02C&quot;>&lt;path d=&quot;M4.5 18q-.5 0-.5-.5v-3q0-.5.5-.5h15q.5 0 .5.5v3q0 .5-.5.5h-15zm0-8Q4 10 4 9.5v-3q0-.5.5-.5h11q.5 0 .5.5v3q0 .5-.5.5h-11zm23 12q.5 0 .5.5v3q0 .5-.5.5h-23q-.5 0-.5-.5v-3q0-.5.5-.5h23zM0 2h2v28H0V2z&quot;/>&lt;/svg>" fillingDirection="Right"/>
+                                        </statusindicator:shapes>
+                                    </statusindicator:ShapeGroup>
+                                </statusindicator:groups>
+                                <statusindicator:propertyThresholds>
+                                    <statusindicator:PropertyThreshold fillColor="green" toValue="100"/>
+                                </statusindicator:propertyThresholds>
+                            </statusindicator:StatusIndicator>
+                        </content>
+                    </TileContent>
+                </tileContent>
+            </GenericTile>
+            <layout:BlockLayout background="Default" visible="true">
+                <layout:content>
+                    <layout:BlockLayoutRow scrollable="false">
+                        <layout:content>
+                            <layout:BlockLayoutCell width="2" title="" titleAlignment="Begin" titleLevel="Auto">
+                                <layout:content>
+                                    <Text text="" width="auto" maxLines="20" wrapping="true" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                </layout:content>
+                            </layout:BlockLayoutCell>
+                            <layout:BlockLayoutCell width="2" title="" titleAlignment="Begin" titleLevel="Auto">
+                                <layout:content/>
+                            </layout:BlockLayoutCell>
+                        </layout:content>
+                    </layout:BlockLayoutRow>
+                </layout:content>
+            </layout:BlockLayout>
+            <Image src="https://lh5.googleusercontent.com/0mojBG3N2m_eToZSvnPeSWK_e8uHUmaSqkBkFIiseg8QfOalgi09v1zNC21jSJMnZdk=w2400" height="309px" width="309px" visible="true" densityAware="false" class="sapUiResponsiveMargin"/>
+        </content>
+        <footer/>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>
